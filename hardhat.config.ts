@@ -130,10 +130,7 @@ const config: HardhatUserConfig = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    // apiKey: "ZUQBXSVXNT8RWQDK7Z5NHV4395U5JJFB5M" // matic
-    // apiKey: "RQ83XPC9R4JQ9GJFXMIGXFEHZIY1SG1E5V" //mainnet
-      apiKey: "FH28YXPI8PWYYQRMGZQNA7FE7UAX8SRA46" //bsc
-   // apiKey: "1E4BR12M8S3V56ADI5PRBM7D6M37NJ5DUB" //rinkeby
+  
   },
   paths: {
     artifacts: "./artifacts",
