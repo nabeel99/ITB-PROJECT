@@ -80,6 +80,7 @@ contract Auction {
     modifier auctionBidChecks(auctionX memory checkAuction) {
         console.log("msg value is ",msg.value);
         console.log("current status is",uint(checkAuction.currentStatus));
+        console.log("mint bid is",checkAuction.minBid);
         console.log(block.timestamp>=checkAuction.startDate);
         console.log(block.timestamp<checkAuction.endDate);
         require(checkAuction.currentStatus==AuctionStatus.Active,"Contract is Inactive");
@@ -127,6 +128,7 @@ contract Auction {
         auction.maxBid = msg.value;
         auction.winnerSoFar = msg.sender;
         bids[msg.sender].amountBid[_ID] = msg.value;
+        Auctions[_ID] = auction;
     }
         ///@notice withdraw, allows owner to withdraw the maxBid of any auction whose status is complete,
         ///@param _ID, auction id
